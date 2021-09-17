@@ -17,13 +17,17 @@ export default {
 	</p>
 </template>
 
-<style>
+<style lang="scss">
 #app {
 	font-family: Roboto, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
-	color: #2c3e50;
+	color: #5e5e5e;
 	margin: 60px auto;
+
+	a {
+		color: #a90036;
+	}
 }
 </style>
