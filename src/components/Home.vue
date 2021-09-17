@@ -6,7 +6,7 @@ export default {
 
 <template>
 	<img alt="Rainbow emoji" src="/src/assets/rainbow.svg" width="100" />
-	<h1>さくらもち<br />(sakuramochi)</h1>
+	<h1>さくらもち<br />* sakuramochi *</h1>
 	<p>🌟GitHub: <a href="https://github.com/sakuramochi0">@sakuramochi0 </a></p>
 	<p>
 		🌟Twitter (archive):
