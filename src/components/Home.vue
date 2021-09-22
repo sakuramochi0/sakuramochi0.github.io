@@ -49,9 +49,9 @@ export default {
         <span class="emoji">{{ repo.description.slice(0, 2) }}</span>
         {{ repo.name }}
       </div>
-      <div class="description">
-        <p>{{ repo.description.slice(2) }}</p>
-      </div>
+      <p class="description">
+        {{ repo.description.slice(2) }}
+      </p>
       <div class="buttons">
         <a class="button" :href="repo.html_url" target="_blank" rel="noopener">
           <img alt="GitHub icon" src="/src/assets/github.svg" />
@@ -63,14 +63,19 @@ export default {
         >
       </div>
     </div>
+    <div class="card">
+      <div class="title">
+        <span class="emoji">❓</span>
+        and more...
+      </div>
+      <div class="description">
+        <p>description</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-:root {
-  --snow: rgba(255, 255, 255, 0.8);
-}
-
 #app {
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -82,23 +87,6 @@ export default {
 
   a {
     color: #a90036;
-  }
-
-  .button {
-    background: lightpink;
-    border: none;
-    padding: 0.4rem 0.6rem;
-    border-radius: 10px;
-    color: white;
-    text-decoration: none;
-
-    &:hover {
-      background: #ffd5db;
-    }
-  }
-
-  .button + .button {
-    margin-left: 5px;
   }
 }
 
@@ -115,29 +103,49 @@ export default {
     grid-template-columns: 1fr;
   }
 
+  .card:nth-child(6n + 1) {
+    background: rgba(255, 91, 41, 0.2);
+  }
+  .card:nth-child(6n + 2) {
+    background: rgba(255, 147, 32, 0.2);
+  }
+  .card:nth-child(6n + 3) {
+    background: rgba(249, 218, 51, 0.2);
+  }
+  .card:nth-child(6n + 4) {
+    background: rgba(155, 205, 70, 0.2);
+  }
+  .card:nth-child(6n + 5) {
+    background: rgba(31, 194, 234, 0.2);
+  }
+  .card:nth-child(6n + 6) {
+    background: rgba(135, 126, 250, 0.2);
+  }
+
   .card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
-    border-radius: 10px;
-    background: var(--snow);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
 
     .title {
       display: flex;
       align-items: center;
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: bold;
 
       .emoji {
-        margin-right: 12px;
-        font-size: 36px;
+        margin-right: 0.5rem;
+        font-size: 2rem;
       }
     }
 
     .description {
       align-items: start;
       flex-grow: 1;
+      margin-block: 0.75rem;
     }
 
     .buttons {
@@ -146,17 +154,26 @@ export default {
       .button {
         display: inline-flex;
         align-items: center;
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        color: dimgray;
+        background: rgba(255, 255, 255, 0.5);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.75);
+        }
 
         img {
-          width: 20px;
+          width: 1.25rem;
           margin-right: 0.25em;
-
-          filter: invert(1);
         }
+      }
+
+      .button + .button {
+        margin-left: 0.5rem;
       }
     }
   }
-}
-#card-container {
 }
 </style>
