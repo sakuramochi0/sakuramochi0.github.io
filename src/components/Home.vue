@@ -1,5 +1,12 @@
 <script lang="ts">
-import repos from '/src/assets/sakuramochi0-repos.json'
+import repos from '../assets/sakuramochi0-repos.json'
+
+interface Repo {
+  name: string
+  html_url: string
+  homepage: string
+  description: string
+}
 
 export default {
   name: 'Home',
@@ -16,7 +23,9 @@ export default {
         'sakuramochi0.github.io',
       ]
 
-      return repos.filter((repo) => repositoryList.includes(repo.name))
+      return (repos as Repo[]).filter((repo) =>
+        repositoryList.includes(repo.name)
+      )
     },
   },
 }
