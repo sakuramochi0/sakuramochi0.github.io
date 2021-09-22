@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "npm run update-data && vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,css,md}\"",
     "posttest": "npm run format",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "update-data": "./update-sakuramochi-repos.bash"
   },
   "dependencies": {
     "vue": "^3.2.6"
