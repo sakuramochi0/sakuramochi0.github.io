@@ -10,9 +10,6 @@ interface Repo {
 
 export default {
   name: 'Home',
-  data() {
-    return {}
-  },
   computed: {
     featuredRepos() {
       const repositoryList: string[] = [
@@ -71,8 +68,12 @@ export default {
         <span class="emoji">❓</span>
         and more...
       </div>
+      <p class="description"></p>
     </div>
   </div>
+  <footer>
+    <p>skrm.ch is using Google Analytics</p>
+  </footer>
 </template>
 
 <style lang="scss">
@@ -185,5 +186,10 @@ export default {
       }
     }
   }
+}
+
+footer {
+  margin-top: 2rem;
+  color: gray;
 }
 </style>
