@@ -34,14 +34,17 @@ export default {
 <template>
   <img alt="Rainbow emoji" src="/src/assets/rainbow.svg" width="100" />
   <h1>さくらもち<br />* sakuramochi *</h1>
-  <p>
-    🌟GitHub: <a href="https://github.com/sakuramochi0">@sakuramochi0 </a>
-    <br />
-    🌟Twitter (archive):
-    <a
-      href="https://storage.googleapis.com/twitter-archive-skrmch_prism/index.html#/tweets/tweets"
-      >@skrmch_prism</a
-    >
+  <p id="account-list">
+    <span>
+      🌟GitHub: <a href="https://github.com/sakuramochi0">@sakuramochi0 </a>
+    </span>
+    <span>
+      🌟Twitter (archive):
+      <a
+        href="https://storage.googleapis.com/twitter-archive-skrmch_prism/index.html#/tweets/tweets"
+        >@skrmch_prism</a
+      >
+    </span>
   </p>
   <div id="card-container">
     <div class="card" v-for="repo in featuredRepos">
@@ -84,6 +87,16 @@ export default {
 
   a {
     color: #a90036;
+  }
+
+  #account-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    span {
+      margin: 0.25rem 0.5rem;
+    }
   }
 }
 
