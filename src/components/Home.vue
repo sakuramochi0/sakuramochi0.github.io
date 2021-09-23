@@ -68,9 +68,6 @@ export default {
         <span class="emoji">❓</span>
         and more...
       </div>
-      <div class="description">
-        <p>description</p>
-      </div>
     </div>
   </div>
 </template>
