@@ -14,6 +14,7 @@ export default {
     featuredRepos() {
       const repositoryList: string[] = [
         'twitter-archive-skrmch_prism',
+        'pristagram',
         'prettyrhythm-prismstone-album',
         'prichan-stylesheet',
         'kinpri-rush-minigame-simulator',
