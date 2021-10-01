@@ -21,9 +21,11 @@ export default {
         'sakuramochi0.github.io',
       ]
 
-      return repositoryList.map((repoName) =>
-        (repos as Repo[]).find((repo) => repo.name === repoName)
-      ) as Repo[]
+      return repositoryList
+        .map((repoName) =>
+          (repos as Repo[]).find((repo) => repo.name === repoName)
+        )
+        .filter((repo): repo is Repo => !!repo)
     },
   },
 }
