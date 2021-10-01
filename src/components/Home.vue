@@ -11,7 +11,7 @@ interface Repo {
 export default {
   name: 'Home',
   computed: {
-    featuredRepos() {
+    featuredRepos(): Repo[] {
       const repositoryList: string[] = [
         'twitter-archive-skrmch_prism',
         'pristagram',
@@ -22,8 +22,8 @@ export default {
       ]
 
       return repositoryList.map((repoName) =>
-        repos.find((repo) => repo.name === repoName)
-      )
+        (repos as Repo[]).find((repo) => repo.name === repoName)
+      ) as Repo[]
     },
   },
 }
