@@ -75,7 +75,7 @@ export default {
       <div class="buttons">
         <a
           class="button"
-          href="https://archive.ph/N6c0q"
+          href="https://archive.it/N6c0q"
           target="_blank"
           rel="noopener"
         >
