@@ -36,7 +36,10 @@ export default {
   <h1>さくらもち<br />* sakuramochi *</h1>
   <p id="account-list">
     <span>
-      🌟GitHub: <a href="https://github.com/sakuramochi0">@sakuramochi0 </a>
+      🌟GitHub: <a href="https://github.com/sakuramochi0">@sakuramochi0</a>
+    </span>
+    <span>
+      🌟Mastodon: <a rel="me" href="https://mastodon.social/@sakuramochi0">@sakuramochi0@mastodon.social</a>
     </span>
     <span>
       🌟Twitter (archive):
