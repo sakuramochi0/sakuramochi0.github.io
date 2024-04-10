@@ -8,11 +8,12 @@
 
 ### Dependencies
 
-- Node.js v16
+- Node.js
+- pnpm
 
 ### Start development
 
 ```shell
-npm i
-npm run dev
+pnpm i
+pnpm dev
 ```
