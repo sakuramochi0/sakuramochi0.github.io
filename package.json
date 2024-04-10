@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "npm run update-data && vue-tsc --noEmit && vite build",
+    "build": "pnpm update-data && vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,css,md}\"",
-    "posttest": "npm run format",
+    "format": "prettier --log-level warn --write \"**/*.{ts,tsx,css,md}\"",
+    "posttest": "pnpm format",
     "prepare": "husky install",
     "update-data": "./update-sakuramochi-repos.bash"
   },
