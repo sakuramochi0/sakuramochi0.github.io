@@ -53,7 +53,7 @@ const accounts: Account[] = [
     <strong>Profiles:</strong>
     <li v-for="account in accounts">
       🌟{{ account.service }}:
-      <a rel="me" :href="account.url">{{ account.name }}</a>
+      <a :href="account.url">{{ account.name }}</a>
     </li>
   </ul>
   <div id="card-container">
