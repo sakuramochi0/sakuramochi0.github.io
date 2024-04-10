@@ -1,6 +1,12 @@
 <script lang="ts">
 import repos from '../assets/sakuramochi0-repos.json'
 
+interface Account {
+  service: string
+  name: string
+  url: string
+}
+
 interface Repo {
   name: string
   html_url: string
@@ -27,6 +33,25 @@ export default {
         )
         .filter((repo): repo is Repo => !!repo)
     },
+    accounts(): Account[] {
+      return [
+        {
+          service: 'GitHub',
+          name: '@sakuramochi0',
+          url: 'https://github.com/sakuramochi0',
+        },
+        {
+          service: 'Mastodon',
+          name: '@sakuramochi0@mastodon.social',
+          url: 'https://mastodon.social/@sakuramochi0',
+        },
+        {
+          service: 'Twitter (archive)',
+          name: '@skrmch_prism',
+          url: 'https://storage.googleapis.com/twitter-archive-skrmch_prism/index.html#/tweets/tweets',
+        },
+      ]
+    },
   },
 }
 </script>
@@ -34,21 +59,13 @@ export default {
 <template>
   <img alt="Rainbow emoji" src="/src/assets/rainbow.svg" width="100" />
   <h1>さくらもち<br />* sakuramochi *</h1>
-  <p id="account-list">
-    <span>
-      🌟GitHub: <a href="https://github.com/sakuramochi0">@sakuramochi0</a>
-    </span>
-    <span>
-      🌟Mastodon: <a rel="me" href="https://mastodon.social/@sakuramochi0">@sakuramochi0@mastodon.social</a>
-    </span>
-    <span>
-      🌟Twitter (archive):
-      <a
-        href="https://storage.googleapis.com/twitter-archive-skrmch_prism/index.html#/tweets/tweets"
-        >@skrmch_prism</a
-      >
-    </span>
-  </p>
+  <ul id="account-list">
+    <strong>Profiles:</strong>
+    <li v-for="account in accounts">
+      🌟{{ account.service }}:
+      <a rel="me" :href="account.url">{{ account.name }}</a>
+    </li>
+  </ul>
   <div id="card-container">
     <div class="card" v-for="repo in featuredRepos">
       <div class="title">
@@ -116,11 +133,14 @@ export default {
 
   #account-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    margin-inline: auto;
+    row-gap: 0.5em;
+    max-width: 24em;
 
-    span {
-      margin: 0.25rem 0.5rem;
+    li {
+      list-style-type: none;
     }
   }
 }
