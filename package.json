@@ -11,18 +11,17 @@
     "update-data": "./update-sakuramochi-repos.bash"
   },
   "dependencies": {
-    "vue": "^3.2.6"
+    "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.6.1",
-    "@vue/compiler-sfc": "^3.2.6",
-    "husky": "^7.0.2",
-    "lint-staged": "^11.1.2",
-    "prettier": "^2.4.1",
-    "sass": "^1.41.1",
-    "typescript": "^4.3.2",
-    "vite": "^2.5.4",
-    "vue-tsc": "^0.2.2"
+    "@vitejs/plugin-vue": "^5.0.4",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "sass": "^1.74.1",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.8",
+    "vue-tsc": "^2.0.12"
   },
   "lint-staged": {
     "*.{ts,tsx,css,md,vue}": "prettier --write"
