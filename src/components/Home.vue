@@ -1,4 +1,4 @@
-<script lang="ts">
+<script setup lang="ts">
 import repos from '../assets/sakuramochi0-repos.json'
 
 interface Account {
@@ -14,46 +14,36 @@ interface Repo {
   description: string
 }
 
-export default {
-  name: 'Home',
-  computed: {
-    featuredRepos(): Repo[] {
-      const repositoryList: string[] = [
-        'twitter-archive-skrmch_prism',
-        'pristagram',
-        'prettyrhythm-prismstone-album',
-        'prichan-stylesheet',
-        'kinpri-rush-minigame-simulator',
-        'sakuramochi0.github.io',
-      ]
+const repositoryList: string[] = [
+  'twitter-archive-skrmch_prism',
+  'pristagram',
+  'prettyrhythm-prismstone-album',
+  'prichan-stylesheet',
+  'kinpri-rush-minigame-simulator',
+  'sakuramochi0.github.io',
+]
 
-      return repositoryList
-        .map((repoName) =>
-          (repos as Repo[]).find((repo) => repo.name === repoName)
-        )
-        .filter((repo): repo is Repo => !!repo)
-    },
-    accounts(): Account[] {
-      return [
-        {
-          service: 'GitHub',
-          name: '@sakuramochi0',
-          url: 'https://github.com/sakuramochi0',
-        },
-        {
-          service: 'Mastodon',
-          name: '@sakuramochi0@mastodon.social',
-          url: 'https://mastodon.social/@sakuramochi0',
-        },
-        {
-          service: 'Twitter (archive)',
-          name: '@skrmch_prism',
-          url: 'https://storage.googleapis.com/twitter-archive-skrmch_prism/index.html#/tweets/tweets',
-        },
-      ]
-    },
+const featuredRepos: Repo[] = repositoryList
+  .map((repoName) => (repos as Repo[]).find((repo) => repo.name === repoName))
+  .filter((repo): repo is Repo => !!repo)
+
+const accounts: Account[] = [
+  {
+    service: 'GitHub',
+    name: '@sakuramochi0',
+    url: 'https://github.com/sakuramochi0',
   },
-}
+  {
+    service: 'Mastodon',
+    name: '@sakuramochi0@mastodon.social',
+    url: 'https://mastodon.social/@sakuramochi0',
+  },
+  {
+    service: 'Twitter (archive)',
+    name: '@skrmch_prism',
+    url: 'https://storage.googleapis.com/twitter-archive-skrmch_prism/index.html#/tweets/tweets',
+  },
+]
 </script>
 
 <template>
