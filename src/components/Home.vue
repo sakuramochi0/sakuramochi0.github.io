@@ -36,7 +36,7 @@ const accounts: Account[] = [
   {
     service: 'Mastodon',
     name: '@sakuramochi0@mastodon.social',
-    url: 'https://mastodon.social/@sakuramochi0',
+    url: 'https://main.elk.zone/mastodon.social/@sakuramochi0',
   },
   {
     service: 'Twitter (archive)',
