@@ -43,6 +43,11 @@ const accounts: Account[] = [
     name: '@skrmch_prism',
     url: 'https://storage.googleapis.com/twitter-archive-skrmch_prism/index.html#/tweets/tweets',
   },
+  {
+    service: 'Email',
+    name: 'sakuramochi.mochi.0@gmail.com',
+    url: 'mailto:sakuramochi.mochi.0@gmail.com',
+  },
 ]
 </script>
 
