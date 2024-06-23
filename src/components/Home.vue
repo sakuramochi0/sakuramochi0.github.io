@@ -1,54 +1,6 @@
 <script setup lang="ts">
-import repos from '../assets/sakuramochi0-repos.json'
-
-interface Account {
-  service: string
-  name: string
-  url: string
-}
-
-interface Repo {
-  name: string
-  html_url: string
-  homepage: string
-  description: string
-}
-
-const repositoryList: string[] = [
-  'twitter-archive-skrmch_prism',
-  'pristagram',
-  'prettyrhythm-prismstone-album',
-  'prichan-stylesheet',
-  'kinpri-rush-minigame-simulator',
-  'sakuramochi0.github.io',
-]
-
-const featuredRepos: Repo[] = repositoryList
-  .map((repoName) => (repos as Repo[]).find((repo) => repo.name === repoName))
-  .filter((repo): repo is Repo => !!repo)
-
-const accounts: Account[] = [
-  {
-    service: 'GitHub',
-    name: '@sakuramochi0',
-    url: 'https://github.com/sakuramochi0',
-  },
-  {
-    service: 'Mastodon',
-    name: '@sakuramochi0@mastodon.social',
-    url: 'https://main.elk.zone/mastodon.social/@sakuramochi0',
-  },
-  {
-    service: 'Twitter (archive)',
-    name: '@skrmch_prism',
-    url: 'https://storage.googleapis.com/twitter-archive-skrmch_prism/index.html#/tweets/tweets',
-  },
-  {
-    service: 'Email',
-    name: 'sakuramochi.mochi.0@gmail.com',
-    url: 'mailto:sakuramochi.mochi.0@gmail.com',
-  },
-]
+import { accounts } from '../accounts'
+import { featuredRepos } from '../repositories'
 </script>
 
 <template>

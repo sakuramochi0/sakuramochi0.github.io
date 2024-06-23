@@ -1,6 +1,7 @@
 {
   "name": "sakuramochi0.github.io",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "pnpm update-data && vue-tsc --noEmit && vite build",
