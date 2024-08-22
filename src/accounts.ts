@@ -6,14 +6,14 @@ type Account = {
 
 export const accounts: Account[] = [
   {
-    service: 'GitHub',
-    name: '@sakuramochi0',
-    url: 'https://github.com/sakuramochi0',
-  },
-  {
     service: 'Mastodon',
     name: '@sakuramochi0@mastodon.social',
     url: 'https://main.elk.zone/mastodon.social/@sakuramochi0',
+  },
+  {
+    service: 'GitHub',
+    name: '@sakuramochi0',
+    url: 'https://github.com/sakuramochi0',
   },
   {
     service: 'Email',
