@@ -16,11 +16,6 @@ export const accounts: Account[] = [
     url: 'https://main.elk.zone/mastodon.social/@sakuramochi0',
   },
   {
-    service: 'Twitter (archive)',
-    name: '@skrmch_prism',
-    url: 'https://storage.googleapis.com/twitter-archive-skrmch_prism/index.html#/tweets/tweets',
-  },
-  {
     service: 'Email',
     name: 'sakuramochi.mochi.0@gmail.com',
     url: 'mailto:sakuramochi.mochi.0@gmail.com',
