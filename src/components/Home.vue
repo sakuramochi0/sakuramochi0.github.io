@@ -35,24 +35,6 @@ import { featuredRepos } from '../repositories'
     </div>
     <div class="card">
       <div class="title">
-        <span class="emoji">📕</span>
-        『樹の下で』
-      </div>
-      <p class="description">ずっと昔に書いたマナりつ小説 💕💎</p>
-      <div class="buttons">
-        <a
-          class="button"
-          href="https://archive.is/N6c0q"
-          target="_blank"
-          rel="noopener"
-        >
-          <img alt="Earth icon" src="/src/assets/earth.svg" />
-          Archive
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="title">
         <span class="emoji">❓</span>
         and more...
       </div>
