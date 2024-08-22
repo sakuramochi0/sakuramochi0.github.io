@@ -7,7 +7,7 @@ import { featuredRepos } from '../repositories'
   <img alt="Rainbow emoji" src="/src/assets/rainbow.svg" width="100" />
   <h1>さくらもち<br />* sakuramochi *</h1>
   <ul id="account-list">
-    <strong>Profiles:</strong>
+    <strong>さくらもちのアカウント</strong>
     <li v-for="account in accounts">
       🌟{{ account.service }}:
       <a :href="account.url">{{ account.name }}</a>
@@ -25,11 +25,11 @@ import { featuredRepos } from '../repositories'
       <div class="buttons">
         <a class="button" :href="repo.html_url" target="_blank" rel="noopener">
           <img alt="GitHub icon" src="/src/assets/github.svg" />
-          GitHub</a
+          Code</a
         >
         <a class="button" :href="repo.homepage" target="_blank" rel="noopener">
           <img alt="GitHub icon" src="/src/assets/earth.svg" />
-          Service</a
+          Open</a
         >
       </div>
     </div>
@@ -130,6 +130,7 @@ import { featuredRepos } from '../repositories'
       align-items: start;
       flex-grow: 1;
       margin-block: 0.75rem;
+      text-wrap: balance;
     }
 
     .buttons {
