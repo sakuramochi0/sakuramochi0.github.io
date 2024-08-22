@@ -42,7 +42,10 @@ import { featuredRepos } from '../repositories'
     </div>
   </div>
   <footer>
-    <p>skrm.ch is using Google Analytics</p>
+    <p>
+      skrm.ch is using
+      <a href="https://developers.google.com/analytics">Google Analytics</a>
+    </p>
   </footer>
 </template>
 
