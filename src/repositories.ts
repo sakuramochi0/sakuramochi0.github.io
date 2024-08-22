@@ -14,7 +14,6 @@ const repositoryList: string[] = [
   'prettyrhythm-prismstone-album',
   'prichan-stylesheet',
   'kinpri-rush-minigame-simulator',
-  'sakuramochi0.github.io',
 ]
 
 export const featuredRepos: Repo[] = repositoryList
