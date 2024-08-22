@@ -6,6 +6,11 @@ import { featuredRepos } from '../repositories'
 <template>
   <img alt="Rainbow emoji" src="/src/assets/rainbow.svg" width="100" />
   <h1>さくらもち<br />* sakuramochi *</h1>
+  <img
+    id="sakuramochi-icon"
+    src="/src/assets/sakuramochi-icon.png"
+    alt="さくらもちのアイコン: ピコック先生が虹を渡っているようすを眺めているレオくんもち"
+  />
   <ul id="account-list">
     <strong>さくらもちのアカウント</strong>
     <li v-for="account in accounts">
@@ -168,5 +173,9 @@ import { featuredRepos } from '../repositories'
 footer {
   margin-top: 2rem;
   color: gray;
+}
+
+#sakuramochi-icon {
+  max-width: min(400px, 100%);
 }
 </style>
