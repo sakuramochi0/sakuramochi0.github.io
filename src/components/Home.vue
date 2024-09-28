@@ -16,6 +16,7 @@ import { featuredRepos } from '../repositories'
     <li v-for="account in accounts">
       🌟{{ account.service }}:
       <a :href="account.url">{{ account.name }}</a>
+      <small v-if="account.note"> ({{ account.note }})</small>
     </li>
   </ul>
   <div id="card-container">
