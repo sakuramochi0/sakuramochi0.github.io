@@ -15,7 +15,7 @@ export const accounts: Account[] = [
     service: 'Bluesky',
     name: '@skrm.ch',
     url: 'https://bsky.app/profile/skrm.ch',
-    note: 'Mastodonから自動投稿',
+    note: 'Mastodonからクロスポスト',
   },
   {
     service: 'GitHub',
