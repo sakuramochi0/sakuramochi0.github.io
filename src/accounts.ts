@@ -24,7 +24,7 @@ export const accounts: Account[] = [
   },
   {
     service: 'Email',
-    name: 'sakuramochi.mochi.0@gmail.com',
-    url: 'mailto:sakuramochi.mochi.0@gmail.com',
+    name: 'me@skrm.ch',
+    url: 'mailto:me@skrm.ch',
   },
 ]
