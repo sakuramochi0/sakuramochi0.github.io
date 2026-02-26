@@ -7,15 +7,22 @@ type Account = {
 
 export const accounts: Account[] = [
   {
-    service: 'Mastodon',
-    name: '@sakuramochi0@mastodon.social',
-    url: 'https://main.elk.zone/mastodon.social/@sakuramochi0',
-  },
-  {
     service: 'Bluesky',
     name: '@skrm.ch',
     url: 'https://bsky.app/profile/skrm.ch',
-    note: 'Mastodonからクロスポスト',
+    note: '2026年Mastodonからクロスポスト',
+  },
+  {
+    service: 'Mastodon',
+    name: '@skrm.ch@bsky.brid.gy',
+    url: 'https://elk.zone/mastodon.social/@skrm.ch@bsky.brid.gy',
+    note: 'Blueskyのブリッジアカウント（MastodonクライアントからフォローなどができるBlueskyのクローンアカウント）',
+  },
+  {
+    service: 'Mastodon',
+    name: '@sakuramochi0@mastodon.social',
+    url: 'https://main.elk.zone/mastodon.social/@sakuramochi0',
+    note: '2025年まで使っていたメインアカウント。Blueskyアカウントにも自分でクロスポストしてた。現在はBlueskyアカウントがメイン。',
   },
   {
     service: 'GitHub',
