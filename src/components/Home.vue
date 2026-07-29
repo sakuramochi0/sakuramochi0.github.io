@@ -51,6 +51,10 @@ import { featuredRepos } from '../repositories'
     <p>
       <a href="https://github.com/sakuramochi0/skrm.ch">📃 source code</a>
     </p>
+    <p>
+      *
+      このページではアクセス分析を行っています。利用者のプライバシーを守るため、アクセスデータはさくらもちのサーバーにのみ送信され、外部には提供されません。
+    </p>
   </footer>
 </template>
 
@@ -171,7 +175,9 @@ import { featuredRepos } from '../repositories'
 }
 
 footer {
+  max-width: 40rem;
   margin-top: 2rem;
+  margin-inline: auto;
   color: gray;
 }
 
